@@ -1,14 +1,17 @@
 // Lesson 5: Async/Await & Promises
 // Demonstrates Promises and async/await for handling operations
 // that take time (like API calls) without blocking execution.
+//
+// Professionalization pass: exported functions for testing, guarded
+// the demo invocation with require.main === module.
 
-function delay(ms: number): Promise<void> {
+export function delay(ms: number): Promise<void> {
     return new Promise((resolve) => {
         setTimeout(resolve, ms);
     });
 }
 
-async function fetchUserData(): Promise<string> {
+export async function fetchUserData(): Promise<string> {
     console.log("Fetching user data...");
     await delay(1000);
     return "Abdalla";
@@ -20,4 +23,6 @@ async function main(): Promise<void> {
     console.log("Program continues after async work completes.");
 }
 
-main();
+if (require.main === module) {
+    main();
+}
