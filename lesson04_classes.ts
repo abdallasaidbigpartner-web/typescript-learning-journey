@@ -6,9 +6,12 @@
 // validation and JSDoc comments - since TypeScript's types are
 // compile-time only, they don't catch invalid values like a
 // negative salary at runtime.
+//
+// Professionalization pass: exported classes for testing, guarded
+// demo code with require.main === module.
 
 /** Represents a basic employee with a name and monthly salary. */
-class Employee {
+export class Employee {
     name: string;
     protected salary: number;
 
@@ -27,7 +30,7 @@ class Employee {
 }
 
 /** A Manager is an Employee who also oversees a team. */
-class Manager extends Employee {
+export class Manager extends Employee {
     private teamSize: number;
 
     constructor(name: string, salary: number, teamSize: number) {
@@ -43,17 +46,18 @@ class Manager extends Employee {
     }
 }
 
-const employee1 = new Employee("Sara", 2000);
-const manager1 = new Manager("Abdalla", 4000, 6);
+if (require.main === module) {
+    const employee1 = new Employee("Sara", 2000);
+    const manager1 = new Manager("Abdalla", 4000, 6);
 
-console.log(employee1.describe());
-console.log(manager1.describe());
+    console.log(employee1.describe());
+    console.log(manager1.describe());
 
-// Validation check: this should throw an error, proving our validation works
-try {
-    const invalidEmployee = new Employee("Test", -500);
-} catch (error) {
-    if (error instanceof Error) {
-        console.log(`Validation caught an error as expected: ${error.message}`);
+    try {
+        const invalidEmployee = new Employee("Test", -500);
+    } catch (error) {
+        if (error instanceof Error) {
+            console.log(`Validation caught an error as expected: ${error.message}`);
+        }
     }
 }
