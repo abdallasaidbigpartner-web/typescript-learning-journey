@@ -1,3 +1,6 @@
 node_modules/
 *.js
 !*.config.js
+logfile
+logfile
+logfile
