@@ -1,6 +1,6 @@
 # TypeScript Learning Journey
 
-TypeScript fundamentals and applied exercises, building toward full-stack software engineering. Each lesson demonstrates a core language feature with working, compiled, and tested code - not just syntax examples.
+Structured TypeScript engineering progression covering application development, full-stack architecture, APIs, testing, and production-oriented software practices.
 
 ## Tech Stack
 
