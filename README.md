@@ -1,6 +1,6 @@
 # TypeScript Learning Journey
 
-![CI](https://github.com/abdallasaidbigpartner-web/typescript-learning-journey/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/abdallasaidbigpartner-web/typescript-learning-journey/actions/workflows/ci.yml/badge.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Structured TypeScript engineering progression covering application development, full-stack architecture, APIs, testing, and production-oriented software practices.
 
