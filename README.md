@@ -1,5 +1,7 @@
 # TypeScript Learning Journey
 
+![CI](https://github.com/abdallasaidbigpartner-web/typescript-learning-journey/actions/workflows/ci.yml/badge.svg)
+
 Structured TypeScript engineering progression covering application development, full-stack architecture, APIs, testing, and production-oriented software practices.
 
 ## Tech Stack
